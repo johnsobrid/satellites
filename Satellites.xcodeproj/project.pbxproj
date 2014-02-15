@@ -112,8 +112,6 @@
 		4F26EE8D18AF1DFB00DC1A1D /* Satellites */ = {
 			isa = PBXGroup;
 			children = (
-				4F26EE9618AF1DFB00DC1A1D /* SatellitesAppDelegate.h */,
-				4F26EE9718AF1DFB00DC1A1D /* SatellitesAppDelegate.m */,
 				4F26EE9918AF1DFB00DC1A1D /* Main.storyboard */,
 				4F26EE9C18AF1DFB00DC1A1D /* SatellitesViewController.h */,
 				4F26EE9D18AF1DFB00DC1A1D /* SatellitesViewController.m */,
@@ -126,6 +124,8 @@
 		4F26EE8E18AF1DFB00DC1A1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F26EE9618AF1DFB00DC1A1D /* SatellitesAppDelegate.h */,
+				4F26EE9718AF1DFB00DC1A1D /* SatellitesAppDelegate.m */,
 				4F26EE8F18AF1DFB00DC1A1D /* Satellites-Info.plist */,
 				4F26EE9018AF1DFB00DC1A1D /* InfoPlist.strings */,
 				4F26EE9318AF1DFB00DC1A1D /* main.m */,
