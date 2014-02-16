@@ -4,7 +4,7 @@
 //
 //  Created by Bridget Johnson on 15/02/14.
 //  Copyright (c) 2014 bdj. All rights reserved.
-//
+//  Test edit by Jim
 
 #import "SatellitesViewController.h"
 
