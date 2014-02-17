@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UISlider *panelOneSpeedSlider;
 @property (strong, nonatomic) IBOutlet UISlider *panelTwoSpeedSlider;
 - (IBAction)HomeButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *outputData;
 
 @end
 
@@ -32,9 +33,16 @@
 }
 
 - (IBAction)HomeButton:(id)sender {
+   [self setOutputData];
+
    [self.panelOneAngleSlider setValue:0.0];
    [self.panelTwoAngleSlider setValue:0.0];
    [self.panelOneSpeedSlider setValue:0.0];
    [self.panelTwoSpeedSlider setValue:0.0];
+   }
+
+-(void)setOutputData
+{
+   self.outputData.text = [NSString stringWithFormat:@"%f angleOne %.2f angleTwo %.2f speedOne %.2fspeedTwo", [self.panelOneAngleSlider value],[self.panelTwoAngleSlider value], [self.panelOneSpeedSlider value], [self.panelTwoSpeedSlider value]];
 }
 @end

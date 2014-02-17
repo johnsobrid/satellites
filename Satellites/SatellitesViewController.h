@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SatellitesViewController : UIViewController
+@interface SatellitesViewController : UIViewController 
 
 @end
