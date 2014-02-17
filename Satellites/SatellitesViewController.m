@@ -14,7 +14,12 @@
 @property (strong, nonatomic) IBOutlet UISlider *panelOneSpeedSlider;
 @property (strong, nonatomic) IBOutlet UISlider *panelTwoSpeedSlider;
 - (IBAction)HomeButton:(id)sender;
-@property (strong, nonatomic) IBOutlet UILabel *outputData;
+- (IBAction)printDataButton:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *panelTwoAngleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *panelOneAngleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *panelOneSpeedLabel;
+@property (strong, nonatomic) IBOutlet UILabel *panelTwoSpeedLabel;
 
 @end
 
@@ -33,7 +38,6 @@
 }
 
 - (IBAction)HomeButton:(id)sender {
-   [self setOutputData];
 
    [self.panelOneAngleSlider setValue:0.0];
    [self.panelTwoAngleSlider setValue:0.0];
@@ -41,8 +45,16 @@
    [self.panelTwoSpeedSlider setValue:0.0];
    }
 
+- (IBAction)printDataButton:(id)sender {
+   [self setOutputData];
+}
+
 -(void)setOutputData
 {
-   self.outputData.text = [NSString stringWithFormat:@"%f angleOne %.2f angleTwo %.2f speedOne %.2fspeedTwo", [self.panelOneAngleSlider value],[self.panelTwoAngleSlider value], [self.panelOneSpeedSlider value], [self.panelTwoSpeedSlider value]];
+   self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
+   self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]];
+   self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
+   self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
+
 }
 @end
