@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <VVOSC/VVOSC.h>
 
-@interface SatellitesViewController : UIViewController 
+@interface SatellitesViewController : UIViewController
+{
+   OSCManager *manager;
+   OSCOutPort *outPort;
+}
 
 @end

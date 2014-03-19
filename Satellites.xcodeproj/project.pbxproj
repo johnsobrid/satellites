@@ -21,6 +21,8 @@
 		4F26EEA918AF1DFB00DC1A1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F26EE8B18AF1DFB00DC1A1D /* UIKit.framework */; };
 		4F26EEB118AF1DFB00DC1A1D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F26EEAF18AF1DFB00DC1A1D /* InfoPlist.strings */; };
 		4F26EEB318AF1DFB00DC1A1D /* SatellitesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F26EEB218AF1DFB00DC1A1D /* SatellitesTests.m */; };
+		4FFA577F18D939580028554B /* libVVBasics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA577A18D9393C0028554B /* libVVBasics.a */; };
+		4FFA578018D9395D0028554B /* libVVOSC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFA577C18D9393C0028554B /* libVVOSC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,97 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4F26EE8318AF1DFA00DC1A1D;
 			remoteInfo = Satellites;
+		};
+		4FFA576518D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961EA8ED100E8565007E6C25;
+			remoteInfo = VVBasics;
+		};
+		4FFA576718D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B06C1C18BE0ECF000A921C;
+			remoteInfo = VVUIToolbox;
+		};
+		4FFA576918D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 961745F4100F86B400FB60E6;
+			remoteInfo = VVMIDI;
+		};
+		4FFA576B18D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D0C5100E89F700C3944E;
+			remoteInfo = VVOSC;
+		};
+		4FFA576D18D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 968FAA86108B6141000E470D;
+			remoteInfo = CrashReporterTestApp;
+		};
+		4FFA576F18D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9656D900100F89BA0064EEA6;
+			remoteInfo = MIDITestApp;
+		};
+		4FFA577118D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9628D179100E8B4D00C3944E;
+			remoteInfo = OSCTestApp;
+		};
+		4FFA577318D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96B49302106AEB4C008FB26E;
+			remoteInfo = MIDIviaOSC;
+		};
+		4FFA577518D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 966CCBD81431EFB9006D580F;
+			remoteInfo = OSCQueryTest;
+		};
+		4FFA577718D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96ACD7211706416300138AE6;
+			remoteInfo = OSCPingTester;
+		};
+		4FFA577918D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C2D185A1A740082DE35;
+			remoteInfo = VVBasicsStatic;
+		};
+		4FFA577B18D9393C0028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96C18C3E185A1A7D0082DE35;
+			remoteInfo = VVOSCStatic;
+		};
+		4FFA577D18D939500028554B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 968A7EEB185BA3100075DEB1;
+			remoteInfo = "Build iOS static libs";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -53,6 +146,7 @@
 		4F26EEAE18AF1DFB00DC1A1D /* SatellitesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SatellitesTests-Info.plist"; sourceTree = "<group>"; };
 		4F26EEB018AF1DFB00DC1A1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4F26EEB218AF1DFB00DC1A1D /* SatellitesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SatellitesTests.m; sourceTree = "<group>"; };
+		4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VVOpenSource.xcodeproj; path = "../../Desktop/PHD/Code/vvopensource-master/VVOpenSource.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FFA578018D9395D0028554B /* libVVOSC.a in Frameworks */,
+				4FFA577F18D939580028554B /* libVVBasics.a in Frameworks */,
 				4F26EE8A18AF1DFB00DC1A1D /* CoreGraphics.framework in Frameworks */,
 				4F26EE8C18AF1DFB00DC1A1D /* UIKit.framework in Frameworks */,
 				4F26EE8818AF1DFB00DC1A1D /* Foundation.framework in Frameworks */,
@@ -86,6 +182,7 @@
 				4F26EEAC18AF1DFB00DC1A1D /* SatellitesTests */,
 				4F26EE8618AF1DFB00DC1A1D /* Frameworks */,
 				4F26EE8518AF1DFB00DC1A1D /* Products */,
+				4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +249,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FFA575518D9393C0028554B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FFA576618D9393C0028554B /* VVBasics.framework */,
+				4FFA576818D9393C0028554B /* VVUIToolbox.framework */,
+				4FFA576A18D9393C0028554B /* VVMIDI.framework */,
+				4FFA576C18D9393C0028554B /* VVOSC.framework */,
+				4FFA576E18D9393C0028554B /* CrashReporterTestApp.app */,
+				4FFA577018D9393C0028554B /* MIDITestApp.app */,
+				4FFA577218D9393C0028554B /* OSCTestApp.app */,
+				4FFA577418D9393C0028554B /* MIDIviaOSC.app */,
+				4FFA577618D9393C0028554B /* OSCQueryTest.app */,
+				4FFA577818D9393C0028554B /* OSCPingTester.app */,
+				4FFA577A18D9393C0028554B /* libVVBasics.a */,
+				4FFA577C18D9393C0028554B /* libVVOSC.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +282,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4FFA577E18D939500028554B /* PBXTargetDependency */,
 			);
 			name = Satellites;
 			productName = Satellites;
@@ -197,7 +314,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Satellites;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = bdj;
 				TargetAttributes = {
 					4F26EEA418AF1DFB00DC1A1D = {
@@ -216,6 +333,12 @@
 			mainGroup = 4F26EE7B18AF1DFA00DC1A1D;
 			productRefGroup = 4F26EE8518AF1DFB00DC1A1D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4FFA575518D9393C0028554B /* Products */;
+					ProjectRef = 4FFA575418D9393C0028554B /* VVOpenSource.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4F26EE8318AF1DFA00DC1A1D /* Satellites */,
@@ -223,6 +346,93 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4FFA576618D9393C0028554B /* VVBasics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVBasics.framework;
+			remoteRef = 4FFA576518D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA576818D9393C0028554B /* VVUIToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVUIToolbox.framework;
+			remoteRef = 4FFA576718D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA576A18D9393C0028554B /* VVMIDI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVMIDI.framework;
+			remoteRef = 4FFA576918D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA576C18D9393C0028554B /* VVOSC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VVOSC.framework;
+			remoteRef = 4FFA576B18D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA576E18D9393C0028554B /* CrashReporterTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CrashReporterTestApp.app;
+			remoteRef = 4FFA576D18D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577018D9393C0028554B /* MIDITestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDITestApp.app;
+			remoteRef = 4FFA576F18D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577218D9393C0028554B /* OSCTestApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCTestApp.app;
+			remoteRef = 4FFA577118D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577418D9393C0028554B /* MIDIviaOSC.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = MIDIviaOSC.app;
+			remoteRef = 4FFA577318D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577618D9393C0028554B /* OSCQueryTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCQueryTest.app;
+			remoteRef = 4FFA577518D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577818D9393C0028554B /* OSCPingTester.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OSCPingTester.app;
+			remoteRef = 4FFA577718D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577A18D9393C0028554B /* libVVBasics.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVBasics.a;
+			remoteRef = 4FFA577918D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FFA577C18D9393C0028554B /* libVVOSC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libVVOSC.a;
+			remoteRef = 4FFA577B18D9393C0028554B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4F26EE8218AF1DFA00DC1A1D /* Resources */ = {
@@ -272,6 +482,11 @@
 			target = 4F26EE8318AF1DFA00DC1A1D /* Satellites */;
 			targetProxy = 4F26EEAA18AF1DFB00DC1A1D /* PBXContainerItemProxy */;
 		};
+		4FFA577E18D939500028554B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Build iOS static libs";
+			targetProxy = 4FFA577D18D939500028554B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -306,7 +521,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -346,7 +560,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -384,6 +597,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Satellites/Satellites-Prefix.pch";
 				INFOPLIST_FILE = "Satellites/Satellites-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +614,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Satellites/Satellites-Prefix.pch";
 				INFOPLIST_FILE = "Satellites/Satellites-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -405,7 +626,6 @@
 		4F26EEBA18AF1DFB00DC1A1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Satellites.app/Satellites";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -428,7 +648,6 @@
 		4F26EEBB18AF1DFB00DC1A1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Satellites.app/Satellites";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -463,6 +682,7 @@
 				4F26EEB818AF1DFB00DC1A1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4F26EEB918AF1DFB00DC1A1D /* Build configuration list for PBXNativeTarget "SatellitesTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +691,7 @@
 				4F26EEBB18AF1DFB00DC1A1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

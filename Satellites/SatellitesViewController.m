@@ -44,6 +44,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (id) init	{
+	if (self = [super init])	{
+		//	make an osc manager- i'm using i'm using a custom in-port to record a bunch of extra conversion for the display, but you can just make a "normal" manager
+				//	by default, the osc manager's delegate will be told when osc messages are received
+		[manager setDelegate:self];
+	}
+	
+	return self;
+}
+
 
 - (IBAction)HomeButton:(id)sender {
 
@@ -57,26 +67,45 @@
 -(void)updateOutputData
 {
    self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]]];
    self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]]];
    self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]]];
    self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]]];
 }
 
 
 - (IBAction)panelOneAngleChanged:(id)sender {
    self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]]];
 }
 
 - (IBAction)panelTwoAngleChanged:(id)sender {
    self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]]];
 }
 
 - (IBAction)panelOneSpeedChanged:(id)sender {
    self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]]];
 }
 
 - (IBAction)panelTwoSpeedChanged:(id)sender {
    self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]]];
 
+}
+
+- (void)sendOSC: (NSString*)msg
+{
+   manager = [[OSCManager alloc] init];
+
+   OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
+
+   outPort = [manager createNewOutputToAddress:@"127.0.0.1" atPort:1234 withLabel:@"Output"];
+
+   [outPort sendThisMessage:newMsg];
 }
 @end
