@@ -113,4 +113,15 @@
    //[outPort setPort:[self.PortInputField text]];
    [outPort sendThisMessage:newMsg];
 }
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+   NSLog(@"%s", __PRETTY_FUNCTION__);
+   return UIInterfaceOrientationMaskLandscape;
+}
+
+- (BOOL)shouldAutorotate
+{
+   return NO;
+}
 @end
