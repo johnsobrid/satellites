@@ -19,6 +19,11 @@
 - (IBAction)panelOneSpeedChanged:(id)sender;
 - (IBAction)panelTwoSpeedChanged:(id)sender;
 
+//networking input outlets
+@property (strong, nonatomic) IBOutlet UITextField *IPinputField;
+@property (strong, nonatomic) IBOutlet UITextField *PortInputField;
+
+
 //ids for the buttons
 - (IBAction)HomeButton:(id)sender;
 
@@ -103,9 +108,9 @@
    manager = [[OSCManager alloc] init];
 
    OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
-
-   outPort = [manager createNewOutputToAddress:@"127.0.0.1" atPort:1234 withLabel:@"Output"];
-
+   
+   outPort = [manager createNewOutputToAddress:[self.IPinputField text] atPort:[[self.PortInputField text] intValue] withLabel:@"Output"];
+   //[outPort setPort:[self.PortInputField text]];
    [outPort sendThisMessage:newMsg];
 }
 @end
