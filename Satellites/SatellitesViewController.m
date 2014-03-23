@@ -116,8 +116,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations
 {
-   NSLog(@"%s", __PRETTY_FUNCTION__);
-   return UIInterfaceOrientationMaskLandscape;
+      return UIInterfaceOrientationMaskLandscape;
 }
 
 - (BOOL)shouldAutorotate
