@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UISlider *panelTwoAngleSlider;
 @property (strong, nonatomic) IBOutlet UISlider *panelOneSpeedSlider;
 @property (strong, nonatomic) IBOutlet UISlider *panelTwoSpeedSlider;
+
 - (IBAction)panelOneAngleChanged:(id)sender;
 - (IBAction)panelTwoAngleChanged:(id)sender;
 - (IBAction)panelOneSpeedChanged:(id)sender;
@@ -72,38 +73,41 @@
 -(void)updateOutputData
 {
    self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]]];
-   self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle" ]msgFloat:[self.panelOneAngleSlider value]];
+   
+   self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle, %.2f ", [self.panelTwoAngleSlider value]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle"] msgFloat: [self.panelTwoAngleSlider value]];
+    
    self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed"]msgFloat:[self.panelOneSpeedSlider value]];
+    
    self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed"] msgFloat:[self.panelTwoSpeedSlider value]];
 }
 
 
 - (IBAction)panelOneAngleChanged:(id)sender {
    self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle" ]msgFloat:[self.panelOneAngleSlider value]];
 }
 
 - (IBAction)panelTwoAngleChanged:(id)sender {
    self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle"] msgFloat: [self.panelTwoAngleSlider value]];
 }
 
 - (IBAction)panelOneSpeedChanged:(id)sender {
    self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed"]msgFloat:[self.panelOneSpeedSlider value]];
 }
 
 - (IBAction)panelTwoSpeedChanged:(id)sender {
    self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]]];
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed"] msgFloat:[self.panelTwoSpeedSlider value]];
 
 }
 
-- (void)sendOSC: (NSString*)msg
+- (void)sendOSC: (NSString*)msg  msgFloat:(float)msgFloat
 {
    manager = [[OSCManager alloc] init];
 
@@ -111,6 +115,7 @@
    
    outPort = [manager createNewOutputToAddress:[self.IPinputField text] atPort:[[self.PortInputField text] intValue] withLabel:@"Output"];
    //[outPort setPort:[self.PortInputField text]];
+   [newMsg addFloat:msgFloat];
    [outPort sendThisMessage:newMsg];
 }
 
