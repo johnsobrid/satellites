@@ -41,9 +41,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    manager = [[OSCManager alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
    [self updateOutputData];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -109,7 +111,7 @@
 
 - (void)sendOSC: (NSString*)msg  msgFloat:(float)msgFloat
 {
-   manager = [[OSCManager alloc] init];
+  
 
    OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
    
