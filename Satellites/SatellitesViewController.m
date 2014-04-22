@@ -27,6 +27,7 @@
 
 //ids for the buttons
 - (IBAction)HomeButton:(id)sender;
+- (IBAction)connectButton:(id)sender;
 
 //properties for the labels
 @property (strong, nonatomic) IBOutlet UILabel *panelTwoAngleLabel;
@@ -41,9 +42,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    manager = [[OSCManager alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
    [self updateOutputData];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+   
+   
+   [self upDateOSC];
+
 }
 
 
@@ -71,6 +79,12 @@
    [self.panelTwoSpeedSlider setValue:0.0];
    [self updateOutputData];
    }
+
+- (IBAction)connectButton:(id)sender {
+   _manualIP = [self.IPinputField text];
+   _manualPort = [self.PortInputField text];
+    [self upDateOSC];
+}
 
 -(void)updateOutputData
 {
@@ -111,12 +125,8 @@
 
 - (void)sendOSC: (NSString*)msg  msgFloat:(float)msgFloat
 {
-  
 
    OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
-   
-   outPort = [manager createNewOutputToAddress:[self.IPinputField text] atPort:[[self.PortInputField text] intValue] withLabel:@"Output"];
-   //[outPort setPort:[self.PortInputField text]];
    [newMsg addFloat:msgFloat];
    [outPort sendThisMessage:newMsg];
 }
@@ -124,6 +134,12 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
       return UIInterfaceOrientationMaskLandscape;
+}
+
+-(void)upDateOSC
+{
+   manager = [[OSCManager alloc] init];
+   outPort = [manager createNewOutputToAddress:_manualIP atPort:[_manualPort intValue] withLabel:@"Output"];
 }
 
 - (BOOL)shouldAutorotate
