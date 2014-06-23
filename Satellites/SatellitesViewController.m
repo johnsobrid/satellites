@@ -9,16 +9,6 @@
 #import "SatellitesViewController.h"
 
 @interface SatellitesViewController ()
-//all the properties for the sliders
-@property (strong, nonatomic) IBOutlet UISlider *panelOneAngleSlider;
-@property (strong, nonatomic) IBOutlet UISlider *panelTwoAngleSlider;
-@property (strong, nonatomic) IBOutlet UISlider *panelOneSpeedSlider;
-@property (strong, nonatomic) IBOutlet UISlider *panelTwoSpeedSlider;
-
-- (IBAction)panelOneAngleChanged:(id)sender;
-- (IBAction)panelTwoAngleChanged:(id)sender;
-- (IBAction)panelOneSpeedChanged:(id)sender;
-- (IBAction)panelTwoSpeedChanged:(id)sender;
 
 //networking input outlets
 @property (strong, nonatomic) IBOutlet UITextField *IPinputField;
@@ -29,13 +19,30 @@
 - (IBAction)HomeButton:(id)sender;
 - (IBAction)connectButton:(id)sender;
 
-//properties for the labels
-@property (strong, nonatomic) IBOutlet UILabel *panelTwoAngleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *panelOneAngleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *panelOneSpeedLabel;
-@property (strong, nonatomic) IBOutlet UILabel *panelTwoSpeedLabel;
+//positions for first Panel buttons
+- (IBAction)panelOne_One:(id)sender;
+- (IBAction)panelOne_Two:(id)sender;
+- (IBAction)panelOne_Three:(id)sender;
+- (IBAction)panelOne_Four:(id)sender;
+- (IBAction)panelOne_Five:(id)sender;
+- (IBAction)panelOne_Sixe:(id)sender;
+- (IBAction)panelOne_Seven:(id)sender;
+- (IBAction)panelOne_Eight:(id)sender;
+
+//positions for second Panel buttons
+- (IBAction)panelTwo_One:(id)sender;
+- (IBAction)panelTwo_Two:(id)sender;
+- (IBAction)panelTwo_Three:(id)sender;
+- (IBAction)panelTwo_Four:(id)sender;
+- (IBAction)panelTwo_Five:(id)sender;
+- (IBAction)panelTwo_Six:(id)sender;
+- (IBAction)panelTwo_Seven:(id)sender;
+- (IBAction)panelTwo_Eight:(id)sender;
+
+
 
 @end
+
 
 @implementation SatellitesViewController
 
@@ -43,13 +50,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-   [self updateOutputData];
+   _manualIP = @"192.168.2.3";
+   _manualPort = @"31337";
+   
+   [self.IPinputField setText:_manualIP];
+   [self.PortInputField setText:_manualPort];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-   
-   
    [self upDateOSC];
 
 }
@@ -72,13 +81,10 @@
 
 
 - (IBAction)HomeButton:(id)sender {
-
-   [self.panelOneAngleSlider setValue:0.0];
-   [self.panelTwoAngleSlider setValue:0.0];
-   [self.panelOneSpeedSlider setValue:0.0];
-   [self.panelTwoSpeedSlider setValue:0.0];
-   [self updateOutputData];
-   }
+   
+   [self sendOSC:@"/panelOne" msgFloat:0.0];
+   [self sendOSC:@"/panelTwo" msgFloat:0.0];
+}
 
 - (IBAction)connectButton:(id)sender {
    _manualIP = [self.IPinputField text];
@@ -86,49 +92,45 @@
     [self upDateOSC];
 }
 
--(void)updateOutputData
-{
-   self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle" ]msgFloat:[self.panelOneAngleSlider value]];
-   
-   self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle, %.2f ", [self.panelTwoAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle"] msgFloat: [self.panelTwoAngleSlider value]];
-    
-   self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed"]msgFloat:[self.panelOneSpeedSlider value]];
-    
-   self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed"] msgFloat:[self.panelTwoSpeedSlider value]];
+- (IBAction)panelOne_One:(id)sender {
+   //change this number to be the anlge you want it to go too
+   float value = 10;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
 }
 
-
-- (IBAction)panelOneAngleChanged:(id)sender {
-   self.panelOneAngleLabel.text = [NSString stringWithFormat:@"/panelOne/angle %.2f ", [self.panelOneAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/angle" ]msgFloat:[self.panelOneAngleSlider value]];
+- (IBAction)panelOne_Two:(id)sender {
+   float value = 20;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
 }
 
-- (IBAction)panelTwoAngleChanged:(id)sender {
-   self.panelTwoAngleLabel.text = [NSString stringWithFormat:@"/panelTwo/angle %.2f ", [self.panelTwoAngleSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/angle"] msgFloat: [self.panelTwoAngleSlider value]];
+- (IBAction)panelOne_Three:(id)sender {
+   float value = 30;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
 }
 
-- (IBAction)panelOneSpeedChanged:(id)sender {
-   self.panelOneSpeedLabel.text = [NSString stringWithFormat:@"/panelOne/speed %.2f ", [self.panelOneSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelOne/speed"]msgFloat:[self.panelOneSpeedSlider value]];
+- (IBAction)panelOne_Four:(id)sender {
+   float value = 40;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
 }
 
-- (IBAction)panelTwoSpeedChanged:(id)sender {
-   self.panelTwoSpeedLabel.text = [NSString stringWithFormat:@"/panelTwo/speed %.2f ", [self.panelTwoSpeedSlider value]];
-   [self sendOSC:[NSString stringWithFormat:@"/panelTwo/speed"] msgFloat:[self.panelTwoSpeedSlider value]];
-
+- (IBAction)panelOne_Five:(id)sender {
+   float value = 50;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
 }
 
-- (void)sendOSC: (NSString*)msg  msgFloat:(float)msgFloat
-{
+- (IBAction)panelOne_Sixe:(id)sender {
+   float value = 60;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
+}
 
-   OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
-   [newMsg addFloat:msgFloat];
-   [outPort sendThisMessage:newMsg];
+- (IBAction)panelOne_Seven:(id)sender {
+   float value = 70;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
+}
+
+- (IBAction)panelOne_Eight:(id)sender {
+   float value = 80;
+   [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
 }
 
 - (NSUInteger)supportedInterfaceOrientations
@@ -142,8 +144,58 @@
    outPort = [manager createNewOutputToAddress:_manualIP atPort:[_manualPort intValue] withLabel:@"Output"];
 }
 
+- (void)sendOSC: (NSString*)msg  msgFloat:(float)msgFloat
+{
+   
+   OSCMessage *newMsg = [OSCMessage createWithAddress:msg];
+   [newMsg addFloat:msgFloat];
+   [outPort sendThisMessage:newMsg];
+}
+
+
 - (BOOL)shouldAutorotate
 {
    return NO;
+}
+
+- (IBAction)panelTwo_One:(id)sender {
+   float value = 10;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+- (IBAction)panelTwo_Two:(id)sender {
+   float value = 20;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+- (IBAction)panelTwo_Three:(id)sender {
+   float value = 30;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+
+- (IBAction)panelTwo_Four:(id)sender {
+   float value = 40;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+- (IBAction)panelTwo_Five:(id)sender {
+   float value = 50;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+- (IBAction)panelTwo_Six:(id)sender {
+   float value = 60;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+- (IBAction)panelTwo_Seven:(id)sender {
+   float value = 70;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+}
+
+- (IBAction)panelTwo_Eight:(id)sender {
+   float value = 80;
+   [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
 }
 @end

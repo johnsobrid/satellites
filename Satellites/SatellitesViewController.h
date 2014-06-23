@@ -16,4 +16,5 @@
 }
 @property (strong, nonatomic) NSString* manualIP;
 @property (strong, nonatomic) NSString* manualPort;
+
 @end
