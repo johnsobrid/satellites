@@ -83,6 +83,12 @@
    [self upDateOSC];
 
 }
+- (IBAction)addressFieldPressed:(id)sender {
+   [self.IPinputField resignFirstResponder];
+}
+- (IBAction)portFieldPressed:(id)sender {
+   [self.PortInputField resignFirstResponder];
+}
 
 
 - (void)didReceiveMemoryWarning
