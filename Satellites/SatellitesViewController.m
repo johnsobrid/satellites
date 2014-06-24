@@ -105,6 +105,25 @@
    
    [self sendOSC:@"/panelOne" msgFloat:0.0];
    [self sendOSC:@"/panelTwo" msgFloat:0.0];
+   
+   self.ImageOne_One.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];
+   
+   self.ImageTwo_ONe.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];
+
 }
 
 - (IBAction)connectButton:(id)sender {
