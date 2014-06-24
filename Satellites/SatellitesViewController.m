@@ -13,6 +13,7 @@
 //networking input outlets
 @property (strong, nonatomic) IBOutlet UITextField *IPinputField;
 @property (strong, nonatomic) IBOutlet UITextField *PortInputField;
+@property (strong, nonatomic) IBOutlet UIButton *panelOne_OneOutlet;
 
 
 //ids for the buttons
@@ -38,6 +39,26 @@
 - (IBAction)panelTwo_Six:(id)sender;
 - (IBAction)panelTwo_Seven:(id)sender;
 - (IBAction)panelTwo_Eight:(id)sender;
+
+//outlets for the images panelOne
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_One;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Two;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Three;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Four;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Five;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Six;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Seven;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageOne_Eight;
+
+//outlets for the images panelTwo
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_ONe;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Two;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Three;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Four;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Five;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Six;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Seven;
+@property (strong, nonatomic) IBOutlet UIImageView *ImageTwo_Eight;
 
 
 
@@ -94,44 +115,106 @@
 
 - (IBAction)panelOne_One:(id)sender {
    //change this number to be the anlge you want it to go too
-   float value = 10;
+   float value = 0;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
+   self.ImageOne_One.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];
 }
 
 - (IBAction)panelOne_Two:(id)sender {
-   float value = 20;
+   float value = 45;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];
+
 }
 
 - (IBAction)panelOne_Three:(id)sender {
-   float value = 30;
+   float value = 90;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
-}
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];}
 
 - (IBAction)panelOne_Four:(id)sender {
-   float value = 40;
+   float value = 135;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
-}
+   
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];}
 
 - (IBAction)panelOne_Five:(id)sender {
-   float value = 50;
+   float value = 180;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];
 }
 
 - (IBAction)panelOne_Sixe:(id)sender {
-   float value = 60;
+   float value = 225;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
-}
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];}
 
 - (IBAction)panelOne_Seven:(id)sender {
-   float value = 70;
+   float value = 270;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor whiteColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor clearColor];
 }
 
 - (IBAction)panelOne_Eight:(id)sender {
-   float value = 80;
+   float value = 315;
    [self sendOSC:[NSString stringWithFormat:@"/panelOne"] msgFloat:value];
-}
+   self.ImageOne_One.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Two.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Three.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Four.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Five.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Six.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageOne_Eight.backgroundColor = [UIColor whiteColor];}
 
 - (NSUInteger)supportedInterfaceOrientations
 {
@@ -159,43 +242,107 @@
 }
 
 - (IBAction)panelTwo_One:(id)sender {
-   float value = 10;
+   float value = 0;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+   self.ImageTwo_ONe.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];
+
 }
 
 - (IBAction)panelTwo_Two:(id)sender {
-   float value = 20;
+   float value = 45;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];
+
 }
 
 - (IBAction)panelTwo_Three:(id)sender {
-   float value = 30;
+   float value = 90;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];
 }
 
 
 - (IBAction)panelTwo_Four:(id)sender {
-   float value = 40;
+   float value = 135;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
-}
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];}
 
 - (IBAction)panelTwo_Five:(id)sender {
-   float value = 50;
+   float value = 180;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];
 }
 
 - (IBAction)panelTwo_Six:(id)sender {
-   float value = 60;
+   float value = 225;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];
 }
 
 - (IBAction)panelTwo_Seven:(id)sender {
-   float value = 70;
+   float value = 270;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
-}
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor whiteColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor clearColor];}
 
 - (IBAction)panelTwo_Eight:(id)sender {
-   float value = 80;
+   float value = 315;
    [self sendOSC:[NSString stringWithFormat:@"/panelTwo"] msgFloat:value];
+   self.ImageTwo_ONe.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Two.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Three.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Four.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Five.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Six.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Seven.backgroundColor = [UIColor clearColor];
+   self.ImageTwo_Eight.backgroundColor = [UIColor whiteColor];
 }
 @end
