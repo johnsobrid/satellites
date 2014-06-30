@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F18D1C51961599000E611AF /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F18D1C41961599000E611AF /* Storyboard_iPhone.storyboard */; };
 		4F26EE8818AF1DFB00DC1A1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F26EE8718AF1DFB00DC1A1D /* Foundation.framework */; };
 		4F26EE8A18AF1DFB00DC1A1D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F26EE8918AF1DFB00DC1A1D /* CoreGraphics.framework */; };
 		4F26EE8C18AF1DFB00DC1A1D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F26EE8B18AF1DFB00DC1A1D /* UIKit.framework */; };
@@ -127,6 +128,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F18D1C41961599000E611AF /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
 		4F26EE8418AF1DFB00DC1A1D /* Satellites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Satellites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F26EE8718AF1DFB00DC1A1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4F26EE8918AF1DFB00DC1A1D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -209,6 +211,7 @@
 		4F26EE8D18AF1DFB00DC1A1D /* Satellites */ = {
 			isa = PBXGroup;
 			children = (
+				4F18D1C41961599000E611AF /* Storyboard_iPhone.storyboard */,
 				4F26EE9918AF1DFB00DC1A1D /* Main.storyboard */,
 				4F26EE9C18AF1DFB00DC1A1D /* SatellitesViewController.h */,
 				4F26EE9D18AF1DFB00DC1A1D /* SatellitesViewController.m */,
@@ -441,6 +444,7 @@
 			files = (
 				4F26EEA018AF1DFB00DC1A1D /* Images.xcassets in Resources */,
 				4F26EE9218AF1DFB00DC1A1D /* InfoPlist.strings in Resources */,
+				4F18D1C51961599000E611AF /* Storyboard_iPhone.storyboard in Resources */,
 				4F26EE9B18AF1DFB00DC1A1D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +606,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -619,6 +624,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

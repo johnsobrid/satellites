@@ -89,6 +89,13 @@
 - (IBAction)portFieldPressed:(id)sender {
    [self.PortInputField resignFirstResponder];
 }
+- (IBAction)iPhonePort:(id)sender {
+   [self.PortInputField resignFirstResponder];
+}
+- (IBAction)iPhoneIP:(id)sender {
+   [self.IPinputField resignFirstResponder];
+
+}
 
 
 - (void)didReceiveMemoryWarning
